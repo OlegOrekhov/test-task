@@ -1,0 +1,89 @@
+.container.partners__container {
+  padding: 0;
+}
+
+.partners__container {
+  display: flex;
+  justify-content: center;
+  height: 260px;
+  gap: 90px;
+}
+
+.partners__container--layout {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+}
+
+.partners__container__logo {
+  background-repeat: no-repeat;
+}
+
+.partners__container__logo.woo {
+  width: 126px;
+  height: 60px;
+  background-image: url(/assets/partners/wooCommerce.png);
+}
+.partners__container__logo.shopify {
+  width: 209px;
+  height: 60px;
+  background-image: url(/assets/partners/shopify.png);
+}
+.partners__container__logo.square {
+  width: 182px;
+  height: 48px;
+  background-image: url(/assets/partners/square.png);
+}
+.partners__container__logo.square-space {
+  width: 277px;
+  height: 40px;
+  background-image: url(/assets/partners/squareSpace.png);
+}
+.partners__container__logo.clover {
+  width: 184px;
+  height: 46px;
+  background-image: url(/assets/partners/clover.png);
+}
+
+@media (max-width: 375px) {
+  .partners__container {
+    height: 277px;
+  }
+
+  .partners__container--layout {
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    column-gap: 40px;
+    row-gap: 30px;
+  }
+
+  .partners__container__logo {
+    background-size: cover;
+  }
+  .partners__container__logo.woo {
+    order: 3;
+    width: 91px;
+    height: 43px;
+  }
+  .partners__container__logo.shopify {
+    order: 2;
+    width: 149px;
+    height: 42px;
+  }
+  .partners__container__logo.square {
+    order: 1;
+    align-self: flex-start;
+    width: 131px;
+    height: 34px;
+  }
+  .partners__container__logo.square-space {
+    order: 4;
+    width: 196px;
+    height: 28px;
+  }
+  .partners__container__logo.clover {
+    order: 5;
+    width: 128px;
+    height: 32px;
+  }
+}

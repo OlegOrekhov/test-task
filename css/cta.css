@@ -1,0 +1,43 @@
+.cta__container {
+  display: flex;
+  justify-content: center;
+  padding: 0 60px;
+  height: 485px;
+}
+
+.cta__container--wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 60px 0;
+  border-radius: 60px;
+  border: 1px solid #cfcfcf;
+  margin: 100px 0;
+}
+
+.cta__container__title {
+  margin-bottom: 39px;
+  color: #000;
+}
+
+@media (max-width: 375px) {
+  .cta__container {
+    padding: 0 16px;
+    height: 341px;
+  }
+
+  .cta__container--wrapper {
+    padding: 39px 19px 38px;
+    margin: 40px 0;
+  }
+
+  .cta__container__title {
+    margin-bottom: 39px;
+    text-align: center;
+  }
+
+  .cta__container__btn {
+    width: 100%;
+  }
+}

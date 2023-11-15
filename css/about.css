@@ -1,0 +1,198 @@
+.about__container {
+  position: relative;
+  height: 953px;
+  margin-bottom: 100px;
+}
+
+.about__container--layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 458px 321px 336px;
+  grid-template-rows: 100px 290px 411px;
+  grid-template-areas:
+    'title title title'
+    'description content content'
+    'pic content content';
+  row-gap: 80px;
+  column-gap: 70px;
+  height: 953px;
+}
+
+.about__container__title {
+  grid-area: title;
+  display: flex;
+  width: 550px;
+  height: 102px;
+}
+
+.about__container__content {
+  position: relative;
+  display: grid;
+  grid-area: content;
+  grid-template-columns: 321px 336px;
+  grid-template-rows: 290px 411px;
+  grid-template-areas:
+    'item-1 item-2'
+    'item-3 item-4';
+  gap: 70px;
+}
+
+.about__container__title__description--layout {
+  grid-area: description;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.about__container__title__description__text {
+  width: 397px;
+  height: 135px;
+  margin-top: 2px;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.about__container__content__description__bg-pic {
+  position: absolute;
+  left: 55px;
+  top: 97px;
+  z-index: -1;
+  width: 355px;
+  height: 45px;
+  background-image: url(/assets/about/rectangle-desktop.svg);
+}
+
+.about__container__main-pic {
+  grid-area: pic;
+  position: absolute;
+  bottom: 8px;
+  left: -60px;
+}
+
+.about__container__content__item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about__container__content__item__icon {
+  margin-bottom: 10px;
+}
+
+.about__container__content__item__title {
+  margin-bottom: 20px;
+}
+
+.about__container__content__item__text {
+  font-size: 24px;
+}
+
+.about__container__content__item.item-1 {
+  grid-area: item-1;
+}
+
+.about__container__content__item.item-2 {
+  grid-area: item-2;
+}
+
+.about__container__content__item.item-3 {
+  grid-area: item-3;
+}
+
+.about__container__content__item.item-4 {
+  grid-area: item-4;
+}
+
+.about__container__content__item.item-2 .about__container__content__item__title {
+  width: 300px;
+}
+
+.about__container__content__item.item-3 .about__container__content__item__title {
+  width: 228px;
+}
+
+.about__container__content__item.item-1 .about__container__content__item__text {
+  width: 321px;
+}
+
+.about__container__content__item.item-2 .about__container__content__item__text {
+  width: 100%;
+}
+
+.about__container__content__item.item-3 .about__container__content__item__text {
+  width: 306px;
+}
+
+.about__container__content__item.item-4 .about__container__content__item__text {
+  width: 336px;
+}
+
+@media (max-width: 375px) {
+  .about__container {
+    height: 1235px;
+    padding-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .about__container--layout {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+    column-gap: 0;
+  }
+
+  .about__container__title {
+    width: auto;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .about__container__content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .about__container__title__description--layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about__container__title__description__text {
+    width: 268px;
+    height: 87px;
+    margin-top: 0;
+    margin-bottom: 42px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .about__container__content__description__bg-pic {
+    position: absolute;
+    left: 38px;
+    top: 60px;
+    z-index: -1;
+    width: 235px;
+    height: 29px;
+    background-image: url(/assets/about/rectangle-mobile.svg);
+  }
+
+  .about__container__main-pic {
+    display: none;
+  }
+
+  .about__container__content__item__title {
+    margin-bottom: 16px;
+  }
+
+  .about__container__content__item__text {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .about__container__content__item.item-3 .about__container__content__item__title {
+    width: 287px;
+  }
+}
