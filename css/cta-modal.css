@@ -1,7 +1,14 @@
+.container.cta-modal__container {
+  padding: 0;
+}
+
 .cta-modal__container {
   height: 821px;
-  padding: 56px 511px 57px 512px;
+  /* padding: 56px 511px 57px 512px; */
   background: rgba(0, 0, 0, 0.2);
+  /* position: absolute;
+  left: 50%; */
+  /* transform: translateX(-50%); */
 }
 
 .cta-modal__container--wrapper {
@@ -59,14 +66,14 @@
   display: block;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 460px) {
   .cta-modal__container {
     height: 817px;
     padding: 135px 20px;
   }
 
   .cta-modal__container--wrapper {
-    width: auto;
+    width: 335px;
     padding: 20px 16px;
   }
 

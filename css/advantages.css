@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   height: 222px;
-  padding: 40px 0;
+  padding: 41px 20px;
   background-color: #954ced;
 }
 
@@ -39,16 +39,36 @@
   max-width: 161px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 660px) {
   .advantages__container {
-    display: flex;
     justify-content: flex-start;
     height: 286px;
     padding: 40px 16px;
     margin-bottom: 40px;
   }
+
   .advantages__container__items {
-    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 430px) {
+  .advantages__container h1 {
+    font-size: 40px;
+  }
+
+  .advantages__container h2 {
+    font-size: 40px;
+  }
+
+  .advantages__container h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 106%;
+  }
+
+  .advantages__container__items {
     flex-direction: column;
     align-items: flex-start;
     gap: 40px;

@@ -45,16 +45,23 @@
   background-image: url(/assets/partners/clover.png);
 }
 
-@media (max-width: 375px) {
-  .partners__container {
-    height: 277px;
-  }
-
+@media (max-width: 1400px) {
   .partners__container--layout {
     flex-wrap: wrap;
     padding: 50px 20px;
     column-gap: 40px;
     row-gap: 30px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .partners__container {
+    height: 277px;
+  }
+
+  .partners__container--layout {
+    justify-content: flex-start;
   }
 
   .partners__container__logo {

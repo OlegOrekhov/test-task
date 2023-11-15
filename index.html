@@ -304,22 +304,24 @@
                 <a class="footer__container__main-block__link" href="#!">Terms of Use - Sellers &amp; Customers</a>
               </div>
             </div>
-            <button class="footer__container__main-block__btn main-btn--dark-bg main-btn">Contact sales</button>
-            <div class="footer__container__main-block__download-app-buttons">
-              <a class="footer__container__main-block__download-app-button" id="buttonAppStore" href="#!">
-                <img
-                  class="footer__container__main-block__download-app-button--image"
-                  src="/assets/footer/appStore.png"
-                  alt="appStore"
-                />
-              </a>
-              <a class="footer__container__main-block__download-app-button" id="buttonGooglePlay" href="#!">
-                <img
-                  class="footer__container__main-block__download-app-button--image"
-                  src="/assets/footer/googlePlay.png"
-                  alt="googlePlay"
-                />
-              </a>
+            <div class="footer__container__main-block__btns">
+              <button class="footer__container__main-block__btn main-btn--dark-bg main-btn">Contact sales</button>
+              <div class="footer__container__main-block__btns__download-app-btns">
+                <a class="footer__container__main-block__btns__download-app-btn" id="buttonAppStore" href="#!">
+                  <img
+                    class="footer__container__main-block__btns__download-app-btn--image"
+                    src="/assets/footer/appStore.png"
+                    alt="appStore"
+                  />
+                </a>
+                <a class="footer__container__main-block__btns__download-app-btn" id="buttonGooglePlay" href="#!">
+                  <img
+                    class="footer__container__main-block__btns__download-app-btn--image"
+                    src="/assets/footer/googlePlay.png"
+                    alt="googlePlay"
+                  />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -358,83 +360,76 @@
     <div class="cta-modal">
       <div class="cta-modal__container container">
         <div class="cta-modal__container--wrapper">
-          <form method="post" class="cta-modal__container__form">
+          <form method="post" class="cta-modal__container__form" id="cta-modal-form">
             <div class="form__field">
               <label class="form__field__title" for="name"
-                >Name<span class="form__field__title__status required"> *</span></label
+                >Name<span class="form__field__title__status required">&nbsp;*</span></label
               >
-
-              <div class="form__field__content--wrapper error">
-                <input
-                  type="text"
-                  name="name"
-                  class="form__field__content__input"
-                  id="name"
-                  required
-                  placeholder="Enter name"
-                />
-              </div>
+              <input
+                type="text"
+                name="name"
+                class="form__field__content__input"
+                id="name"
+                required
+                placeholder="Enter name"
+              />
               <div class="form__field__content__status required">This field is required.</div>
               <div class="form__field__content__status error">Error.</div>
             </div>
+
             <div class="form__field">
               <label class="form__field__title" for="email"
                 >Email<span class="form__field__title__status required"> *</span></label
               >
-              <div class="form__field__content--wrapper">
-                <input
-                  type="email"
-                  name="email"
-                  class="form__field__content__input"
-                  id="email"
-                  required
-                  placeholder="Enter email"
-                />
-              </div>
+              <input
+                type="email"
+                name="email"
+                class="form__field__content__input"
+                id="email"
+                required
+                placeholder="Enter email"
+              />
               <div class="form__field__content__status required">This field is required.</div>
               <div class="form__field__content__status error">Invalid email.</div>
             </div>
+
             <div class="form__field">
               <label class="form__field__title" for="phone"
                 >Phone number<span class="form__field__title__status required"> *</span></label
               >
-              <div class="form__field__content--wrapper">
-                <img class="form__field__content__flag" src="assets/modal/russiaFlag.svg" alt="russia-flag" />
-                <input
-                  type="tel"
-                  name="phone"
-                  class="form__field__content__input"
-                  id="phone"
-                  required
-                  placeholder="+7 000 000 00 00"
-                />
-              </div>
+              <img class="form__field__content__flag" src="assets/modal/russiaFlag.svg" alt="russia-flag" />
+              <input
+                type="tel"
+                name="phone"
+                class="form__field__content__input"
+                id="phone"
+                required
+                placeholder="+7 000 000 00 00"
+              />
               <div class="form__field__content__status required">This field is required.</div>
               <div class="form__field__content__status error">Invalid phone number.</div>
             </div>
+
             <div class="form__field">
               <label class="form__field__title" for="company">Company</label>
-              <div class="form__field__content--wrapper">
-                <input
-                  type="text"
-                  name="company"
-                  class="form__field__content__input"
-                  id="company"
-                  placeholder="Enter company"
-                />
-              </div>
+              <input
+                type="text"
+                name="company"
+                class="form__field__content__input"
+                id="company"
+                placeholder="Enter company"
+              />
             </div>
+
             <div class="form__field">
               <label class="form__field__title" for="website">Website/Store URL</label>
-              <div class="form__field__content--wrapper">
-                <input
-                  type="text"
-                  name="website"
-                  class="form__field__content__input"
-                  id="website"
-                  placeholder="Enter Website/Store URL"
-                />
-              </div>
+              <input
+                type="text"
+                name="website"
+                class="form__field__content__input"
+                id="website"
+                placeholder="Enter Website/Store URL"
+              />
             </div>
           </form>
           <p class="cta-modal__container__status required">Please fill in all required fields</p>
@@ -443,8 +438,10 @@
             <span class="cta-modal__container__text--link">Privacy Policy</span> and
             <span class="cta-modal__container__text--link">Terms of Use</span>
           </p>
-          <button class="cta-modal__container__btn main-btn--light-bg main-btn" type="submit">Contact sales</button>
-          <button class="cta-modal__container__close-btn">
+          <button class="cta-modal__container__btn main-btn--light-bg main-btn" type="submit" form="cta-modal-form">
+            Contact sales
+          </button>
+          <button class="cta-modal__container__close-btn" type="submit">
             <img class="cta-modal__container__close-btn--icon" src="/assets/modal/close.svg" alt="close button" />
           </button>
         </div>

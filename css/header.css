@@ -5,7 +5,7 @@
 .header.sticky-nav {
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 2;
 }
 
 .header__container {
@@ -78,7 +78,7 @@
   height: 40px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 600px) {
   .header__container__super-nav {
     padding: 0;
   }
@@ -99,10 +99,5 @@
   .header__container__nav__burger-btn {
     display: block;
     align-self: flex-start;
-  }
-
-  .header__container__nav__btn-burger--icon {
-    width: 40px;
-    height: 40px;
   }
 }

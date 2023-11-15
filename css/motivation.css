@@ -9,8 +9,10 @@
 }
 
 .motivation__container__title {
-  width: 822px;
-  height: 204px;
+  max-width: 822px;
+  width: 100%;
+  max-height: 204px;
+  height: 100%;
   margin-bottom: 20px;
   color: #000;
 }
@@ -48,12 +50,39 @@
   grid-area: tiktok;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1400px) {
   .motivation__container {
     flex-direction: column;
-    height: 349px;
+    align-items: center;
+    height: 500px;
     margin-bottom: 40px;
     padding: 0 0 0 16px;
+  }
+}
+
+@media (max-width: 880px) {
+  .motivation__container h1 {
+    font-size: 50px;
+  }
+
+  .motivation__container__title {
+    height: 84px;
+    margin-bottom: 20px;
+  }
+
+  .motivation__container__text {
+    width: 340px;
+  }
+}
+
+@media (max-width: 500px) {
+  .motivation__container h1 {
+    font-size: 40px;
+  }
+
+  .motivation__container {
+    align-items: flex-start;
+    height: 349px;
   }
 
   .motivation__container__title--layout {

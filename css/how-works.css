@@ -12,10 +12,11 @@
 .how-works__container__presentation {
   position: absolute;
   top: 7px;
-  left: 566px;
+  left: 50%;
   z-index: 1;
   width: 308px;
   height: 623px;
+  transform: translateX(-50%);
 }
 
 .how-works__container__bg--layout {
@@ -103,7 +104,6 @@
 
   .how-works__container__presentation {
     top: 40px;
-    left: 73px;
     width: 228px;
     height: 461px;
   }

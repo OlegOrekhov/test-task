@@ -1,7 +1,14 @@
+.container.success-modal__container {
+  padding: 0;
+}
+
 .success-modal__container {
   height: 821px;
   padding: 69px 511px 191px 512px;
   background: rgba(0, 0, 0, 0.2);
+  /* position: absolute;
+  left: 50%; */
+  /* transform: translateX(-50%); */
 }
 
 .success-modal__container--wrapper {
@@ -66,7 +73,7 @@
   right: 16px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 430px) {
   .success-modal__container {
     height: 817px;
     padding: 170px 20px;
