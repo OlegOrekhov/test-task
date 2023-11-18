@@ -1,3 +1,16 @@
+.burger-menu {
+  display: none;
+}
+
+.burger-menu.visible {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
 .container.burger-menu__container {
   padding: 0;
 }
@@ -6,7 +19,7 @@
   display: flex;
   flex-direction: column;
   width: 375px;
-  height: 812px;
+  height: 1000px;
   padding: 0 16px;
   background-color: #181818;
 }

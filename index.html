@@ -23,12 +23,12 @@
     <link rel="stylesheet" href="css/success-modal.css" />
     <link rel="stylesheet" href="css/burger-menu.css" />
 
-    <!-- <script src="js/script.js"></script> -->
+    <script type="module" src="js/script.js" defer></script>
+    <script type="module" src="js/validation.js" defer></script>
   </head>
 
   <body>
     <header class="header">
-      <!-- sticky-nav -->
       <div class="header__container container">
         <div class="header__container__super-nav">
           <ul class="header__container__super-nav__items">
@@ -44,8 +44,8 @@
           <a class="header__container__nav__logo" href="#!">
             <img class="header__container__nav__logo--img" src="/assets/logo.svg" alt="Логотип Budss" />
           </a>
-          <button class="header__container__nav__btn main-btn--dark-bg main-btn">Contact sales</button>
-          <button class="header__container__nav__burger-btn">
+          <button class="header__container__nav__btn main-btn--dark-bg main-btn contact-btn">Contact sales</button>
+          <button class="header__container__nav__burger-btn burger-menu__open-btn">
             <img class="header__container__nav__btn-burger--icon" src="/assets/burger.svg" alt="" />
           </button>
         </nav>
@@ -61,7 +61,7 @@
               Budss is a payments as a service and WOM engine dedicated to acquisition and retention of customers to
               your business.
             </p>
-            <button class="hero__container__btn main-btn--dark-bg main-btn">Contact sales</button>
+            <button class="hero__container__btn main-btn--dark-bg main-btn contact-btn">Contact sales</button>
           </div>
           <div class="hero__container__pic"></div>
         </div>
@@ -128,11 +128,16 @@
 
       <div class="how-works" id="how-works">
         <div class="how-works__container container">
-          <img
-            class="how-works__container__presentation"
-            src="assets/howWorks/phone.png"
-            alt="how works presentation"
-          />
+          <picture>
+            <source type="image/webp" srcset="assets/howWorks/phone@1x.webp 1x, assets/howWorks/phone@2x.webp 2x" />
+            <img
+              class="how-works__container__presentation"
+              src="assets/howWorks/phone@1x.png"
+              srcset="assets/howWorks/phone@2x.png 2x"
+              alt="how works presentation"
+            />
+          </picture>
+
           <div class="how-works__container__bg--layout">
             <div class="how-works__container__bg__line top-line">
               <div class="how-works__container__bg__line__pic turquoise"></div>
@@ -240,7 +245,7 @@
           <div class="cta__container container">
             <div class="cta__container--wrapper">
               <h2 class="cta__container__title">Let &nbsp;Your Business Grow</h2>
-              <button class="cta__container__btn main-btn--light-bg main-btn">Contact sales</button>
+              <button class="cta__container__btn main-btn--light-bg main-btn contact-btn">Contact sales</button>
             </div>
           </div>
         </div>
@@ -286,7 +291,7 @@
       </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer__container container">
         <div class="footer__container--layout">
           <div class="footer__container__main-block">
@@ -305,21 +310,35 @@
               </div>
             </div>
             <div class="footer__container__main-block__btns">
-              <button class="footer__container__main-block__btn main-btn--dark-bg main-btn">Contact sales</button>
+              <button class="footer__container__main-block__btn main-btn--dark-bg main-btn contact-btn">
+                Contact sales
+              </button>
               <div class="footer__container__main-block__btns__download-app-btns">
                 <a class="footer__container__main-block__btns__download-app-btn" id="buttonAppStore" href="#!">
-                  <img
-                    class="footer__container__main-block__btns__download-app-btn--image"
-                    src="/assets/footer/appStore.png"
-                    alt="appStore"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="/assets/footer/appStore@1x.webp 1x, /assets/footer/appStore@2x.webp 2x" />
+                    <img
+                      class="footer__container__main-block__btns__download-app-btn--image"
+                      src="/assets/footer/appStore@1x.png"
+                      srcset="/assets/footer/appStore@2x.png 2x"
+                      alt="appStore"
+                  /></picture>
                 </a>
                 <a class="footer__container__main-block__btns__download-app-btn" id="buttonGooglePlay" href="#!">
-                  <img
-                    class="footer__container__main-block__btns__download-app-btn--image"
-                    src="/assets/footer/googlePlay.png"
-                    alt="googlePlay"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="/assets/footer/googlePlay@1x.webp 1x, /assets/footer/googlePlay@2x.webp 2x"
+                    />
+                    <img
+                      class="footer__container__main-block__btns__download-app-btn--image"
+                      src="/assets/footer/googlePlay@1x.png"
+                      srcset="/assets/footer/googlePlay@2x.png 2x"
+                      alt="googlePlay"
+                    />
+                  </picture>
                 </a>
               </div>
             </div>
@@ -339,7 +358,7 @@
       </div>
     </footer>
 
-    <div class="cookies-modal">
+    <div class="cookies-modal" id="cookies-modal">
       <div class="cookies-modal__container container">
         <div class="cookies-modal__container--wrapper">
           <p class="cookies-modal__container__text">
@@ -347,67 +366,73 @@
             They also allow us to analyze user behavior in order to constantly improve the website for you.
           </p>
           <div class="cookies-modal__container__btns">
-            <button class="cookies-modal__container__btn--accept main-btn--light-bg main-btn">Accept</button>
-            <button class="cookies-modal__container__btn--decline main-btn--light-bg main-btn">Decline</button>
+            <button
+              class="cookies-modal__container__btn cookies-modal__container__btn--accept main-btn--light-bg main-btn cookies-modal__close-btn"
+            >
+              Accept
+            </button>
+            <button
+              class="cookies-modal__container__btn cookies-modal__container__btn--decline main-btn--light-bg main-btn cookies-modal__close-btn"
+            >
+              Decline
+            </button>
           </div>
-          <button class="cookies-modal__container__close-btn">
+          <button class="cookies-modal__container__close-btn cookies-modal__close-btn">
             <img class="cookies-modal__container__close-btn--icon" src="/assets/modal/close.svg" alt="close button" />
           </button>
         </div>
       </div>
     </div>
 
-    <div class="cta-modal">
+    <div class="cta-modal" id="cta-modal">
       <div class="cta-modal__container container">
         <div class="cta-modal__container--wrapper">
-          <form method="post" class="cta-modal__container__form" id="cta-modal-form">
+          <form method="post" class="cta-modal__container__form" id="cta-modal-form" novalidate>
             <div class="form__field">
               <label class="form__field__title" for="name"
-                >Name<span class="form__field__title__status required">&nbsp;*</span></label
+                >Name<span class="form__field__title__status">&nbsp;*</span></label
               >
               <input
                 type="text"
                 name="name"
-                class="form__field__content__input"
+                class="form__field__content__input validation"
                 id="name"
-                required
                 placeholder="Enter name"
               />
-              <div class="form__field__content__status required">This field is required.</div>
-              <div class="form__field__content__status error">Error.</div>
+              <div class="form__field__content__status--required">This field is required.</div>
+              <div class="form__field__content__status--valid">Error.</div>
             </div>
 
             <div class="form__field">
               <label class="form__field__title" for="email"
-                >Email<span class="form__field__title__status required"> *</span></label
+                >Email<span class="form__field__title__status"> *</span></label
               >
               <input
                 type="email"
                 name="email"
-                class="form__field__content__input"
+                class="form__field__content__input validation"
                 id="email"
-                required
                 placeholder="Enter email"
               />
-              <div class="form__field__content__status required">This field is required.</div>
-              <div class="form__field__content__status error">Invalid email.</div>
+              <div class="form__field__content__status--required">This field is required.</div>
+              <div class="form__field__content__status--valid">Invalid email.</div>
             </div>
 
             <div class="form__field">
               <label class="form__field__title" for="phone"
-                >Phone number<span class="form__field__title__status required"> *</span></label
+                >Phone number<span class="form__field__title__status"> *</span></label
               >
               <img class="form__field__content__flag" src="assets/modal/russiaFlag.svg" alt="russia-flag" />
               <input
                 type="tel"
                 name="phone"
-                class="form__field__content__input"
+                class="form__field__content__input validation"
                 id="phone"
-                required
                 placeholder="+7 000 000 00 00"
+                maxlength="18"
               />
-              <div class="form__field__content__status required">This field is required.</div>
-              <div class="form__field__content__status error">Invalid phone number.</div>
+              <div class="form__field__content__status--required">This field is required.</div>
+              <div class="form__field__content__status--valid">Invalid phone number.</div>
             </div>
 
             <div class="form__field">
@@ -432,23 +457,27 @@
               />
             </div>
           </form>
-          <p class="cta-modal__container__status required">Please fill in all required fields</p>
+          <p class="cta-modal__container__status">Please fill in all required fields</p>
           <p class="cta-modal__container__text">
             By submitting this form you are agreeing to Budss’s
             <span class="cta-modal__container__text--link">Privacy Policy</span> and
             <span class="cta-modal__container__text--link">Terms of Use</span>
           </p>
-          <button class="cta-modal__container__btn main-btn--light-bg main-btn" type="submit" form="cta-modal-form">
+          <button
+            class="cta-modal__container__btn main-btn--light-bg main-btn cta-modal__submit-btn"
+            type="submit"
+            form="cta-modal-form"
+          >
             Contact sales
           </button>
-          <button class="cta-modal__container__close-btn" type="submit">
+          <button class="cta-modal__container__close-btn cta-modal__close-btn">
             <img class="cta-modal__container__close-btn--icon" src="/assets/modal/close.svg" alt="close button" />
           </button>
         </div>
       </div>
     </div>
 
-    <div class="success-modal">
+    <div class="success-modal" id="success-modal">
       <div class="success-modal__container container">
         <div class="success-modal__container--wrapper">
           <div class="success-modal__container__picture--layout">
@@ -458,19 +487,24 @@
           <p class="success-modal__container__text">
             Thank you, we have received your application and will contact you soon!
           </p>
-          <button class="success-modal__container__btn main-btn--light-bg main-btn" type="submit">Super!</button>
-          <button class="success-modal__container__close-btn">
+          <button
+            class="success-modal__container__btn main-btn--light-bg main-btn success-modal__close-btn"
+            type="submit"
+          >
+            Super!
+          </button>
+          <button class="success-modal__container__close-btn success-modal__close-btn">
             <img class="success-modal__container__close-btn--icon" src="/assets/modal/close.svg" alt="close button" />
           </button>
         </div>
       </div>
     </div>
 
-    <div class="burger-menu">
+    <div class="burger-menu" id="burger-menu">
       <div class="burger-menu__container container">
         <div class="burger-menu__container--wrapper">
           <div class="burger-menu__container__header">
-            <button class="burger-menu__container burger-btn-close display-none">
+            <button class="burger-menu__container__header__close-btn burger-menu__close-btn">
               <img
                 class="header__container__nav__btn-burger-close--icon"
                 src="/assets//modal/burgerClose.svg"
@@ -478,7 +512,9 @@
               />
             </button>
           </div>
-          <button class="burger-menu__container__btn main-btn--dark-bg main-btn" type="submit">Contact sales</button>
+          <button class="burger-menu__container__btn main-btn--dark-bg main-btn burger-menu__contact-btn" type="submit">
+            Contact sales
+          </button>
           <div class="burger-menu__container__links">
             <a class="burger-menu__container__link" href="#!">For Business</a>
             <a class="burger-menu__container__link" href="#!">For Customers</a>

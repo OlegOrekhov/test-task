@@ -30,7 +30,12 @@
   object-fit: cover;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(/assets/hero/hero-picture-desktop.png);
+  background-image: image-set(
+    url(/assets/hero/hero-picture-desktop@1x.png) 1x,
+    url(/assets/hero/hero-picture-desktop@2x.png) 2x,
+    url(/assets/hero/hero-picture-desktop@1x.webp) type('image/webp') 1x,
+    url(/assets/hero/hero-picture-desktop@2x.webp) type('image/webp') 2x
+  );
 }
 
 @media (max-width: 1200px) {
@@ -71,6 +76,20 @@
     font-size: 32px;
     font-weight: 700;
     line-height: 106%;
+  }
+
+  .hero__container__pic {
+    position: absolute;
+    top: 450px;
+    align-self: flex-end;
+    width: 250px;
+    height: 250px;
+    background-image: image-set(
+      url(/assets/hero/hero-picture-mobile@1x.png) 1x,
+      url(/assets/hero/hero-picture-mobile@2x.png) 2x,
+      url(/assets/hero/hero-picture-mobile@1x.webp) type('image/webp') 1x,
+      url(/assets/hero/hero-picture-mobile@2x.webp) type('image/webp') 2x
+    );
   }
 }
 
@@ -114,12 +133,9 @@
   }
 
   .hero__container__pic {
-    position: absolute;
     top: 545px;
-    align-self: flex-end;
     width: 325px;
     height: 271px;
-    background-image: url(/assets/hero/hero-picture-mobile.png);
   }
 
   .hero__container__btn {

@@ -149,7 +149,7 @@
   right: 0;
   width: 88px;
   height: 167px;
-  background-image: url(/assets/whyBuds/card2-purple.png);
+  background-image: url(/assets/whyBuds/card2-purple.svg);
 }
 
 .card-02 .why-budss__container__content__card__pic.pic-02 {
@@ -228,7 +228,7 @@
 
   .why-budss__container__title__explanation {
     width: 352px;
-    padding-left: 7px;
+    padding-left: 6px;
     font-size: 24px;
     line-height: 1.2;
   }
@@ -240,12 +240,6 @@
     width: 244px;
     height: 29px;
     background-image: url(/assets/whyBuds/rectangle-mobile.svg);
-  }
-
-  .why-budss__container__content__cards.first-row {
-  }
-
-  .why-budss__container__content__cards.second-row {
   }
 
   .why-budss__container__content__card--wrapper {

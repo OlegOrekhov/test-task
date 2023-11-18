@@ -14,16 +14,7 @@
 }
 
 .form__field__title__status {
-  display: none;
   color: #ec1211;
-}
-
-form__field__title--required {
-  color: #ec1211;
-}
-
-.form__field__title__status.required {
-  display: contents;
 }
 
 .form__field__content__input {
@@ -43,18 +34,19 @@ form__field__title--required {
   box-shadow: inset 0 0 0 50px #ffffff;
 }
 
-.form__field__content__status {
+.form__field__content__status--required,
+.form__field__content__status--valid {
   display: none;
   font-size: 12px;
   line-height: 20px;
   color: #ec1211;
 }
 
-.form__field__content__status.required {
+.form__field__content__status--required.required {
   display: block;
 }
 
-.form__field__content__status .error {
+.form__field__content__status--valid.not-valid {
   display: block;
 }
 
@@ -76,11 +68,8 @@ form__field__title--required {
   color: #a7a7a7;
 }
 
-.form__field__content__input:required {
-  border: 1px solid #ec1211;
-}
-
-.form__field__content__input:invalid {
+.form__field__content__input.required,
+.form__field__content__input.invalid {
   border: 1px solid #ec1211;
 }
 
@@ -94,12 +83,4 @@ form__field__title--required {
 
 .form__field__content__input:focus {
   border: 1px solid #070707;
-}
-
-.form__field__content__input.required {
-  border: 1px solid #ec1211;
-}
-
-.form__field__content__input.error {
-  border: 1px solid #ec1211;
 }

@@ -46,6 +46,7 @@ html {
 }
 
 body {
+  position: relative;
   width: 100vw;
   min-width: 375px;
   font-family: Outfit;

@@ -43,7 +43,7 @@
   .advantages__container {
     justify-content: flex-start;
     height: 286px;
-    padding: 40px 16px;
+    padding: 40px 13px 40px 16px;
     margin-bottom: 40px;
   }
 

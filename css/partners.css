@@ -22,27 +22,27 @@
 .partners__container__logo.woo {
   width: 126px;
   height: 60px;
-  background-image: url(/assets/partners/wooCommerce.png);
+  background-image: url(/assets/partners/wooCommerce.svg);
 }
 .partners__container__logo.shopify {
   width: 209px;
   height: 60px;
-  background-image: url(/assets/partners/shopify.png);
+  background-image: url(/assets/partners/shopify.svg);
 }
 .partners__container__logo.square {
   width: 182px;
   height: 48px;
-  background-image: url(/assets/partners/square.png);
+  background-image: url(/assets/partners/square.svg);
 }
 .partners__container__logo.square-space {
   width: 277px;
   height: 40px;
-  background-image: url(/assets/partners/squareSpace.png);
+  background-image: url(/assets/partners/squareSpace.svg);
 }
 .partners__container__logo.clover {
   width: 184px;
   height: 46px;
-  background-image: url(/assets/partners/clover.png);
+  background-image: url(/assets/partners/clover.svg);
 }
 
 @media (max-width: 1400px) {

@@ -9,6 +9,7 @@
 }
 
 .header__container {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -23,7 +24,9 @@
 }
 
 .header.sticky-nav .header__container__super-nav {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
 }
 
 .header__container__super-nav__items {
@@ -59,6 +62,10 @@
   background-color: #181818;
 }
 
+.header.sticky-nav .header__container__nav {
+  margin-bottom: 38px;
+}
+
 .header__container__nav__logo {
   max-width: 155px;
   height: 49px;
@@ -91,7 +98,9 @@
     max-width: 124px;
     height: 39px;
   }
+}
 
+@media (max-width: 375px) {
   .header__container__nav__btn {
     display: none;
   }
