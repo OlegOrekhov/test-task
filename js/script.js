@@ -98,10 +98,6 @@ contactModalOpenBtn.forEach((e) => {
   e.addEventListener('click', contactModalVisible)
 })
 
-contactModalCloseBtn.addEventListener('click', () => {
-  ctaModal.classList.remove('visible')
-})
-
 // Validation part
 
 const checkFieldsFilling = () => {
@@ -146,15 +142,15 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 document.addEventListener('DOMContentLoaded', () => {
-  const getInputNumberValue = (input) => {
+  let getInputNumberValue = (input) => {
     return input.value.replace(/\D/g, '')
   }
 
-  const onPhoneInput = (e) => {
-    const input = e.target,
-      inputNumbersValue = getInputNumberValue(input)
-    formattedInputValue = ''
-    selectionStart = input.selectionStart
+  let onPhoneInput = (e) => {
+    let input = e.target,
+      inputNumbersValue = getInputNumberValue(input),
+      formattedInputValue = '',
+      selectionStart = input.selectionStart
 
     if (!inputNumbersValue) {
       return (input.value = '')
@@ -169,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (['7', '8', '9'].indexOf(inputNumbersValue[0]) > -1) {
       if (inputNumbersValue[0] === '9') inputNumbersValue = '7' + inputNumbersValue
-      const firstSymbols = inputNumbersValue[0] === '8' ? '+7' : '+7'
+      let firstSymbols = inputNumbersValue[0] === '8' ? '+7' : '+7'
       formattedInputValue = firstSymbols + ' '
       if (inputNumbersValue.length > 1) {
         formattedInputValue += inputNumbersValue.substring(1, 4)
@@ -189,15 +185,15 @@ document.addEventListener('DOMContentLoaded', () => {
     input.value = formattedInputValue
   }
 
-  const onPhoneKeyDown = (e) => {
-    const input = e.target
+  let onPhoneKeyDown = (e) => {
+    let input = e.target
     if (e.keyCode === 8 && getInputNumberValue(input).length === 1) {
       input.value = '1'
     }
   }
 
-  const onPhonePaste = (e) => {
-    const pasted = e.clipboardData || window.clipboardData
+  let onPhonePaste = (e) => {
+    let pasted = e.clipboardData || window.clipboardData
     input = e.target
     inputNumbersValue = getInputNumberValue(input)
 
@@ -209,17 +205,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const onPhoneValidation = (e) => {
-    const input = e.target
+  let onPhoneValidation = (e) => {
+    let input = e.target
     if (input.value.length < 16 && input.value.length > 0) {
       validationFieldsStatus[2].classList.add('not-valid')
-    } else if (input.value.length === 0 || input.value.length === 16) {
+    } else if (input.value.length === 0 || input.value.length == 16) {
       validationFieldsStatus[2].classList.remove('not-valid')
     }
   }
 
-  phoneField.addEventListener('input', onPhoneValidation)
   phoneField.addEventListener('input', onPhoneInput)
+  phoneField.addEventListener('input', onPhoneValidation)
   phoneField.addEventListener('keydown', onPhoneKeyDown)
   phoneField.addEventListener('paste', onPhonePaste)
 })
@@ -254,6 +250,15 @@ const totalCheckOnErrors = () => {
   }
 }
 
+const clearFieldsError = () => {
+  for (let i = 0; i < validateFields.length; i++) {
+    fillingFieldsStatus[i].classList.remove('required')
+    validationFieldsStatus[i].classList.remove('not-valid')
+    validateFields[i].classList.remove('required')
+    fillingStatus.classList.remove('required')
+  }
+}
+
 form.addEventListener('submit', (e) => {
   e.preventDefault()
   checkFieldsFilling()
@@ -262,6 +267,12 @@ form.addEventListener('submit', (e) => {
     successModalVisible()
     e.target.reset()
   }
+})
+
+contactModalCloseBtn.addEventListener('click', () => {
+  form.reset()
+  clearFieldsError()
+  ctaModal.classList.remove('visible')
 })
 
 const initialState = () => {
