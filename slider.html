@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/slider/normalize.css" />
+    <link rel="stylesheet" href="/slider/slider.css" />
+    <script src="/slider/slider.js" defer></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="slider">
+        <h1 class="slider__title">Single Item Slider</h1>
+        <div class="slider__content--wrapper">
+          <button class="slider-control-prev slider-control" id="prevSlideBtn" type="button">
+            <img
+              class="slider-control-prev--img slider-control--img"
+              src="/slider/left-arrow.svg"
+              alt="previous slide"
+            />
+          </button>
+          <div class="slider__content">
+            <div class="slider__content__track"></div>
+          </div>
+          <button class="slider-control-next slider-control" id="nextSlideBtn" type="button">
+            <img class="slider-control-next--img slider-control--img" src="/slider/right-arrow.svg" alt="next slide" />
+          </button>
+        </div>
+        <ul class="slider__dots"></ul>
+      </div>
+    </div>
+  </body>
+</html>
