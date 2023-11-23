@@ -22,7 +22,7 @@ const isNumber = (value) => {
 }
 
 let index = 0
-let targetIndex = 0
+let targetIndex = null
 let currentSlide = null
 
 const sliderInitialization = () => {
@@ -86,9 +86,11 @@ const handleNextSlide = (targetIndex = null) => {
 
   let startTime = Date.now()
   const nextSlide = generateSlide(items, index)
+
   setTimeout(() => {
     sliderTrack.append(nextSlide)
   }, 0)
+
   let timer = setInterval(() => {
     let timePassed = Date.now() - startTime
     btnsDisable()

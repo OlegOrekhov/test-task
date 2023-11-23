@@ -45,9 +45,8 @@ const cookiesModalVisible = () => {
   setTimeout(() => {
     cookiesModal.classList.add('visible')
     cookiesModalContent.classList.add('visible')
-
     window.addEventListener('scroll', scrollDisabled)
-  }, 1000)
+  }, 500)
 }
 
 cookiesModalCloseBtn.forEach((e) => {
@@ -87,7 +86,7 @@ burgerCloseBtn.addEventListener('click', () => {
 
 burgerContactBtn.addEventListener('click', () => {
   burgerMenuHidden()
-  ctaModalVisible()
+  contactModalVisible()
 })
 
 const contactModalVisible = () => {
